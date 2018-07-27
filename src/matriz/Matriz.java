@@ -117,7 +117,6 @@ public class Matriz {
                     //Mostrar la matriz Generada
                     System.out.println("\n Matriz Generada(Adyacencia):");
                     mostrar(grafo);
-                    //Matriz elevada
                     int [][] grafo2=grafo, grafo_conexo=grafo, cero=cero(matriz);
                     int coeficiente,contador=0;
                     System.out.println("Ingrese numero a elevar: ");
@@ -155,9 +154,6 @@ public class Matriz {
                     System.out.println("###################################");
                     mostrar(grafo_conexo);
                     conexo(grafo_conexo);
-                    break;
-                default:
-                    System.out.println("Elige otra opcion");
                     break;
             }
         }
