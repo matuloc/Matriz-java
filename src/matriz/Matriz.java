@@ -1,4 +1,5 @@
 package matriz;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 /*
  * @author Matulo
@@ -90,7 +91,7 @@ public class Matriz {
             System.out.print("\n");
         }
     }
- 
+ // ################################## Inicio de programa ##################################
     public static void main(String[] args) {
         //Ingreso tamaño de la matriz
         int matriz, opcion;
@@ -102,9 +103,10 @@ public class Matriz {
             switch(opcion)
             {
                 case 1:
-                    System.out.println("Ingrese tamaño de la matriz:");
-                    matriz = cin.nextInt();
-                    int [][] grafo = new int[matriz][matriz];
+                    try{
+		    	System.out.println("Ingrese tamaño de la matriz:");
+                        matriz = cin.nextInt();
+                        int [][] grafo = new int[matriz][matriz];
                     //Ingreso de valores a la matriz
                     for(int i= 0;i<grafo.length;i++)
                     {
@@ -154,6 +156,14 @@ public class Matriz {
                     System.out.println("###################################");
                     mostrar(grafo_conexo);
                     conexo(grafo_conexo);
+		    }catch(InputMismatchException ex){
+		    	System.out.println("Debe introducir solo números");
+		    }finally{
+		    	cin.nextLine();
+		    }
+                    
+                    
+                    
                     break;
             }
         }
