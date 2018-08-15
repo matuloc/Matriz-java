@@ -126,6 +126,7 @@ public class Matriz {
                     if(coeficiente==0)//Matriz elevada a 0(identidad)
                     {
                         grafo2=cero(matriz);
+                        grafo_conexo=sumar_grafo(grafo2,cero);
                     }
                     else
                     {
@@ -152,8 +153,11 @@ public class Matriz {
                     //Mostrar Matriz Elevada
                     System.out.println("Matriz Elevada:");
                     mostrar(grafo2);
+                    //Mostrar Identidad
+                    System.out.println("Matriz Identidad:");
+                    mostrar(cero);
                     //Ver si es conexo o no
-                    System.out.println("###################################");
+                    System.out.println("######## Caminos del Grafo ########");
                     mostrar(grafo_conexo);
                     conexo(grafo_conexo);
 		    }catch(InputMismatchException ex){
